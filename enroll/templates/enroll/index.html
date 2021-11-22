@@ -1,0 +1,20 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+<div class="container mt-4">
+<h3 class="alert alert-info " align="center"> Choose Your Location !</h3>
+    <form class="form-control my-2 my-lg my-sm-0" method="POST" novalidate>
+        {% csrf_token %}
+        <p align="center">
+       <label for="" class="bg-light">Location : </label> 
+        {{form}}
+        <button class="btn btn-info my-2 my-sm-0 btn-sm" type="submit">Submit</button>
+    </p>
+    </form>
+
+    <div class="row mt-4">
+        <div class="col sm-12">
+            {{m|safe}}
+        </div>
+    </div>
+</div>
+{% endblock %}
